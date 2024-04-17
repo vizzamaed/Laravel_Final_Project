@@ -1,3 +1,4 @@
+@include('partials.narvar')
 <nav class= "mt-2 ml-5 fixed w-full z-20 top-0 left-0">
     <div>
         <ul class="flex justify-end mr-5">
