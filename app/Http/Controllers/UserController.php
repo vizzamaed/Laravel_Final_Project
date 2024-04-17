@@ -31,6 +31,15 @@ class UserController extends Controller
         return view('Users.Register');
     }
 
+    public function logout(Request $request){
+        auth()->logout();
+
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+
+        return redirect('/');
+    }
+
     public function store(Request $request){
         $validated = $request->validate([
             "username" => ['required', 'min:4'],
